@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section className="relative h-[80vh] min-h-[500px] w-full">
       <Image
-        src="https://picsum.photos/1920/1080"
+        src="https://i.imgur.com/pZaVpBP.jpeg"
         alt="Solar panels on a modern house roof"
         fill
         className="object-cover"
