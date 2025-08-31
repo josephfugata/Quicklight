@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 
 const projects = [
   {
-    src: 'https://picsum.photos/600/400?random=5',
+    src: 'https://i.imgur.com/yymBOQV.png',
     alt: 'Modern home with a complete solar roof installation',
     hint: 'modern house solar',
     category: 'Residential',
