@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { DollarSign, Leaf, TrendingUp } from 'lucide-react';
 
 export default function Calculator() {
-  const [monthlyBill, setMonthlyBill] = useState(150);
+  const [monthlyBill, setMonthlyBill] = useState(5000);
 
   const { yearlySavings, lifetimeSavings, co2Reduction } = useMemo(() => {
     const yearlyBill = monthlyBill * 12;
@@ -16,9 +16,9 @@ export default function Calculator() {
     const yearlySavings = yearlyBill * 0.85;
     const lifetimeSavings = yearlySavings * 25; // 25-year lifespan
 
-    // Environmental calculation constants
-    const AVG_KWH_PRICE = 0.17; // Average price per kWh in USD
-    const CO2_PER_KWH = 0.4; // kg of CO2 per kWh for average US grid electricity
+    // Environmental calculation constants for the Philippines
+    const AVG_KWH_PRICE = 11; // Average price per kWh in PHP
+    const CO2_PER_KWH = 0.7; // kg of CO2 per kWh for PH grid electricity
 
     const monthlyKwh = monthlyBill / AVG_KWH_PRICE;
     const lifetimeCo2Kg = monthlyKwh * 12 * 25 * CO2_PER_KWH;
@@ -62,21 +62,22 @@ export default function Calculator() {
                     Average Monthly Electricity Bill
                   </label>
                   <div className="flex items-center gap-4">
-                    <span className="text-2xl font-bold font-headline">$</span>
+                    <span className="text-2xl font-bold font-headline">₱</span>
                     <Input
                       id="monthly-bill"
                       type="number"
                       value={monthlyBill}
                       onChange={handleInputChange}
                       className="w-32 text-2xl font-bold font-headline h-12"
+                      max={50000}
                     />
                   </div>
                 </div>
                 <Slider
                   value={[monthlyBill]}
                   onValueChange={handleSliderChange}
-                  max={1000}
-                  step={10}
+                  max={50000}
+                  step={100}
                   aria-label="Monthly Bill Slider"
                 />
               </div>
@@ -87,14 +88,14 @@ export default function Calculator() {
                   <div className="flex flex-col items-center">
                     <DollarSign className="h-8 w-8 text-primary mb-2" />
                     <span className="text-2xl font-bold font-headline">
-                      ${yearlySavings.toLocaleString()}
+                      ₱{yearlySavings.toLocaleString()}
                     </span>
                     <span className="text-sm text-muted-foreground">Est. Yearly Savings</span>
                   </div>
                   <div className="flex flex-col items-center">
                     <TrendingUp className="h-8 w-8 text-primary mb-2" />
                     <span className="text-2xl font-bold font-headline">
-                      ${lifetimeSavings.toLocaleString()}
+                      ₱{lifetimeSavings.toLocaleString()}
                     </span>
                     <span className="text-sm text-muted-foreground">Est. Lifetime Savings</span>
                   </div>
@@ -106,7 +107,7 @@ export default function Calculator() {
                     <span className="text-sm text-muted-foreground">Tons of CO2 Reduced</span>
                   </div>
                 </div>
-                 <p className="text-xs text-muted-foreground text-center pt-2">*Estimates are illustrative and based on a 25-year system lifespan and average energy costs. Actual savings may vary.</p>
+                 <p className="text-xs text-muted-foreground text-center pt-2">*Estimates are illustrative and based on a 25-year system lifespan and average energy costs in the Philippines. Actual savings may vary.</p>
               </div>
             </div>
           </CardContent>
