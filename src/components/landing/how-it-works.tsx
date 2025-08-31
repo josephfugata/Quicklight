@@ -1,5 +1,6 @@
 import { Badge } from '@/components/ui/badge';
 import { DraftingCompass, FileCheck, PanelsTopLeft, Wrench, Zap } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 const steps = [
   {
@@ -47,21 +48,22 @@ export default function HowItWorks() {
           {/* The timeline line */}
           <div className="absolute left-6 md:left-1/2 top-0 h-full w-0.5 bg-border -translate-x-1/2" aria-hidden="true" />
           
-          <div className="relative space-y-12">
+          <div className="relative flex flex-col gap-y-12">
             {steps.map((step, index) => (
-              <div key={step.title} className="relative flex items-start md:items-center">
-                {/* Content block */}
-                <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12 md:text-right'} md:order-${index % 2 === 0 ? 1 : 2} pl-12 md:pl-0`}>
-                  <div className="p-6 rounded-lg bg-card shadow-md border transform transition-transform hover:scale-105 hover:shadow-xl">
-                    <h3 className="text-xl font-bold font-headline">{step.title}</h3>
-                    <p className="mt-2 text-muted-foreground">{step.description}</p>
-                  </div>
-                </div>
-
-                {/* Icon and circle */}
-                <div className={`absolute left-6 top-1 md:left-1/2 w-12 h-12 flex items-center justify-center -translate-x-1/2 md:order-1`}>
-                    <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center ring-8 ring-secondary">
+              <div key={step.title} className="relative">
+                <div className="md:flex md:items-center">
+                    {/* Icon and circle */}
+                    <div className={`flex-shrink-0 w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center absolute left-6 md:left-1/2 top-1 -translate-x-1/2 z-10 ring-8 ring-secondary`}>
                         {step.icon}
+                    </div>
+
+                    {/* Content block */}
+                    <div className={cn(
+                        'md:w-1/2 ml-12 md:ml-0 p-6 rounded-lg bg-card shadow-md border transform transition-transform hover:scale-105 hover:shadow-xl',
+                        index % 2 === 0 ? 'md:pl-16' : 'md:ml-[50%] md:pr-16 md:text-right'
+                    )}>
+                        <h3 className="text-xl font-bold font-headline">{step.title}</h3>
+                        <p className="mt-2 text-muted-foreground">{step.description}</p>
                     </div>
                 </div>
               </div>
