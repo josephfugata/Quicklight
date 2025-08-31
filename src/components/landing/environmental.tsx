@@ -48,7 +48,7 @@ export default function Environmental() {
         </div>
         <div className="flex justify-center">
             <Image
-                src="https://picsum.photos/600/600"
+                src="https://i.imgur.com/aHHXKqE.png"
                 alt="Image of a lush green landscape with a clear blue sky"
                 width="600"
                 height="600"
