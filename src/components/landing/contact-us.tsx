@@ -40,7 +40,7 @@ export default function ContactUs() {
             We're here to help with all your solar and lighting needs.
           </p>
         </div>
-        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+        <div className="mt-12 grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
           {contactDetails.map((detail) => (
             <Card key={detail.title} className="text-center flex flex-col">
               <CardHeader className="items-center">
