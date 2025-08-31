@@ -45,15 +45,15 @@ export const metadata: Metadata = {
   authors: [{ name: 'QUICKLIGHT Solar and Lighting Solutions Inc.' }],
   creator: 'QUICKLIGHT Solar and Lighting Solutions Inc.',
   publisher: 'QUICKLIGHT Solar and Lighting Solutions Inc.',
-  manifest: '/site.webmanifest',
+  manifest: '/favicon/site.webmanifest',
   icons: {
     icon: [
-      { url: '/favicon.ico', sizes: 'any' },
-      { url: '/favicon-16x16.png', type: 'image/png', sizes: '16x16' },
-      { url: '/favicon-32x32.png', type: 'image/png', sizes: '32x32' },
+      { url: '/favicon/favicon.ico', sizes: 'any' },
+      { url: '/favicon/favicon-16x16.png', type: 'image/png', sizes: '16x16' },
+      { url: '/favicon/favicon-32x32.png', type: 'image/png', sizes: '32x32' },
     ],
     apple: [
-      { url: '/apple-touch-icon.png' },
+      { url: '/favicon/apple-touch-icon.png' },
     ],
   },
 };
