@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
           <Sun className="h-6 w-6 text-primary" />
           <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-            © {new Date().getFullYear()} Shine Brighter Tomorrow. All Rights Reserved.
+            © {new Date().getFullYear()} QUICKLIGHT. All Rights Reserved.
           </p>
         </div>
         <p className="text-center text-sm text-muted-foreground">

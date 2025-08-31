@@ -17,7 +17,7 @@ const fontPtSans = PT_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Shine Brighter Tomorrow',
+  title: 'QUICKLIGHT',
   description: 'Powering a brighter future with sustainable solar solutions.',
 };
 

@@ -19,7 +19,7 @@ export default function Header() {
         <Link href="/" className="mr-6 flex items-center space-x-2">
           <Sun className="h-6 w-6 text-primary" />
           <span className="hidden font-bold font-headline sm:inline-block">
-            Shine Brighter Tomorrow
+            QUICKLIGHT
           </span>
         </Link>
         
