@@ -30,7 +30,7 @@ const services = [
     title: 'Solar Street Lights',
     description: 'Illuminate communities with our high-performance, autonomous solar street lights. Perfect for roads, parks, and public spaces, ensuring safety and sustainability.',
     image: {
-      src: 'https://picsum.photos/600/400?random=2',
+      src: 'https://i.imgur.com/TlJqrRA.png',
       alt: 'A solar-powered street light at dusk',
       hint: 'solar streetlight'
     },
