@@ -16,7 +16,7 @@ const projects = [
     category: 'Commercial',
   },
   {
-    src: 'https://picsum.photos/600/400?random=7',
+    src: 'https://i.imgur.com/N8QdFo1.jpeg',
     alt: 'Drone view of a large-scale solar farm',
     hint: 'solar farm',
     category: 'Utility-Scale',
