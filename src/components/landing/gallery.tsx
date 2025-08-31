@@ -22,7 +22,7 @@ const projects = [
     category: 'Utility-Scale',
   },
   {
-    src: 'https://picsum.photos/600/400?random=8',
+    src: 'https://i.imgur.com/rYxb3ZY.jpeg',
     alt: 'Close-up of solar panels on a tiled roof',
     hint: 'roof solar',
     category: 'Residential',
