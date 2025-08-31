@@ -51,7 +51,7 @@ export default function OurTechnology() {
             <Card className="overflow-hidden">
                 <CardContent className="p-0">
                     <Image
-                        src="https://i.imgur.com/N8QdFo1.jpeg"
+                        src="https://i.imgur.com/Rhi50HX.png"
                         alt="Close-up of a high-efficiency solar panel"
                         width={600}
                         height={500}
