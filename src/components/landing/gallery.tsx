@@ -44,14 +44,13 @@ export default function Gallery() {
         </div>
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-6">
           {projects.map((project, index) => (
-            <Card key={index} className="overflow-hidden group">
-              <CardContent className="p-0 relative">
+            <Card key={index} className="overflow-hidden group flex flex-col">
+              <CardContent className="p-0 relative aspect-video">
                 <Image
                   src={project.src}
                   alt={project.alt}
-                  width={600}
-                  height={400}
-                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
                   data-ai-hint={project.hint}
                 />
                  <div className="absolute bottom-0 left-0 bg-primary/80 text-primary-foreground px-3 py-1 text-sm font-semibold rounded-tr-lg">
