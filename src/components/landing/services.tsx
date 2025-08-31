@@ -58,7 +58,7 @@ const services = [
     title: 'Solar Road Studs',
     description: 'Improve nighttime visibility and lane delineation with our bright, robust solar road studs. Easy installation and long-lasting performance.',
     image: {
-      src: 'https://picsum.photos/600/400?random=4',
+      src: 'https://i.imgur.com/PkGdKDC.png',
       alt: 'Glowing solar road studs on a highway at night',
       hint: 'road night'
     },
