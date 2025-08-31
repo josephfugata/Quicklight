@@ -45,73 +45,78 @@ export default function Calculator() {
   return (
     <section id="calculator" className="w-full py-12 md:py-24 lg:py-32">
       <div className="container px-4 md:px-6">
-        <Card className="mx-auto max-w-4xl shadow-lg">
-          <CardHeader className="text-center">
-            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">
-              Calculate Your Solar Savings
-            </h2>
-            <CardDescription className="mx-auto mt-2 max-w-md text-lg">
-              Use the slider or enter your average monthly electricity bill to see your potential savings.
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="grid gap-8 md:grid-cols-2 md:gap-12">
-              <div className="space-y-6">
-                <div className="space-y-2">
-                  <label htmlFor="monthly-bill" className="text-sm font-medium">
-                    Average Monthly Electricity Bill
-                  </label>
-                  <div className="flex items-center gap-4">
-                    <span className="text-2xl font-bold font-headline">₱</span>
-                    <Input
-                      id="monthly-bill"
-                      type="number"
-                      value={monthlyBill}
-                      onChange={handleInputChange}
-                      className="w-32 text-2xl font-bold font-headline h-12"
-                      max={50000}
-                    />
-                  </div>
+        <div className="mx-auto max-w-5xl">
+            <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
+                <div className="flex flex-col justify-center space-y-4">
+                    <div className="space-y-2">
+                        <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">
+                        Calculate Your Solar Savings
+                        </h2>
+                        <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed">
+                        Use the slider or enter your average monthly electricity bill to see your potential savings and environmental impact.
+                        </p>
+                    </div>
+                     <Card className="p-6">
+                        <div className="space-y-6">
+                            <div className="space-y-2">
+                                <label htmlFor="monthly-bill" className="text-sm font-medium">
+                                Average Monthly Electricity Bill (PHP)
+                                </label>
+                                <div className="flex items-center gap-4">
+                                <span className="text-2xl font-bold font-headline">₱</span>
+                                <Input
+                                    id="monthly-bill"
+                                    type="number"
+                                    value={monthlyBill}
+                                    onChange={handleInputChange}
+                                    className="w-40 text-2xl font-bold font-headline h-12"
+                                    max={50000}
+                                />
+                                </div>
+                            </div>
+                            <Slider
+                                value={[monthlyBill]}
+                                onValueChange={handleSliderChange}
+                                max={50000}
+                                step={100}
+                                aria-label="Monthly Bill Slider"
+                            />
+                        </div>
+                     </Card>
                 </div>
-                <Slider
-                  value={[monthlyBill]}
-                  onValueChange={handleSliderChange}
-                  max={50000}
-                  step={100}
-                  aria-label="Monthly Bill Slider"
-                />
-              </div>
-
-              <div className="rounded-lg bg-secondary p-6 space-y-4">
-                <h3 className="font-headline text-lg font-semibold text-center">Your Estimated 25-Year Impact</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
-                  <div className="flex flex-col items-center">
-                    <DollarSign className="h-8 w-8 text-primary mb-2" />
-                    <span className="text-2xl font-bold font-headline">
-                      ₱{yearlySavings.toLocaleString()}
-                    </span>
-                    <span className="text-sm text-muted-foreground">Est. Yearly Savings</span>
-                  </div>
-                  <div className="flex flex-col items-center">
-                    <TrendingUp className="h-8 w-8 text-primary mb-2" />
-                    <span className="text-2xl font-bold font-headline">
-                      ₱{lifetimeSavings.toLocaleString()}
-                    </span>
-                    <span className="text-sm text-muted-foreground">Est. Lifetime Savings</span>
-                  </div>
-                   <div className="flex flex-col items-center">
-                    <Leaf className="h-8 w-8 text-primary mb-2" />
-                    <span className="text-2xl font-bold font-headline">
-                      {co2Reduction.toLocaleString()}
-                    </span>
-                    <span className="text-sm text-muted-foreground">Tons of CO2 Reduced</span>
-                  </div>
+                <div className="flex items-center">
+                    <Card className="w-full bg-secondary shadow-lg">
+                        <CardHeader>
+                            <CardTitle className="text-center text-2xl font-headline">Your Estimated 25-Year Impact</CardTitle>
+                        </CardHeader>
+                        <CardContent className="space-y-6">
+                            <div className="flex flex-col items-center p-6 rounded-lg bg-primary/10">
+                                <DollarSign className="h-10 w-10 text-primary mb-2" />
+                                <span className="text-sm text-muted-foreground">Est. Yearly Savings</span>
+                                <span className="text-4xl font-bold font-headline">
+                                ₱{yearlySavings.toLocaleString()}
+                                </span>
+                            </div>
+                            <div className="flex flex-col items-center p-6 rounded-lg bg-primary/10">
+                                <TrendingUp className="h-10 w-10 text-primary mb-2" />
+                                 <span className="text-sm text-muted-foreground">Est. Lifetime Savings</span>
+                                <span className="text-4xl font-bold font-headline">
+                                ₱{lifetimeSavings.toLocaleString()}
+                                </span>
+                            </div>
+                            <div className="flex flex-col items-center p-6 rounded-lg bg-primary/10">
+                                <Leaf className="h-10 w-10 text-primary mb-2" />
+                                <span className="text-sm text-muted-foreground">Tons of CO2 Reduced</span>
+                                <span className="text-4xl font-bold font-headline">
+                                {co2Reduction.toLocaleString()}
+                                </span>
+                            </div>
+                            <p className="text-xs text-muted-foreground text-center pt-2">*Estimates are illustrative and based on a 25-year system lifespan and average energy costs in the Philippines. Actual savings may vary.</p>
+                        </CardContent>
+                    </Card>
                 </div>
-                 <p className="text-xs text-muted-foreground text-center pt-2">*Estimates are illustrative and based on a 25-year system lifespan and average energy costs in the Philippines. Actual savings may vary.</p>
-              </div>
             </div>
-          </CardContent>
-        </Card>
+        </div>
       </div>
     </section>
   );
