@@ -1,11 +1,11 @@
-import { Sun } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
     <footer className="w-full bg-background border-t">
       <div className="container flex flex-col items-center justify-between gap-4 py-10 md:h-24 md:flex-row md:py-0">
         <div className="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
-          <Sun className="h-6 w-6 text-primary" />
+          <Image src="https://i.imgur.com/54r9O3J.png" alt="QuickLight Logo" width={24} height={24} className="h-6 w-6" />
           <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
             © {new Date().getFullYear()} QUICKLIGHT. All Rights Reserved.
           </p>
