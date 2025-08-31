@@ -44,7 +44,7 @@ const services = [
     title: 'Solar Traffic Flashers',
     description: 'Enhance road safety with our durable, off-grid solar traffic flashers and warning signs. High visibility and zero running costs.',
     image: {
-      src: 'https://picsum.photos/600/400?random=3',
+      src: 'https://i.imgur.com/7U6J49P.png',
       alt: 'A solar-powered traffic flasher on a road',
       hint: 'traffic safety'
     },
