@@ -13,6 +13,7 @@ import Faq from '@/components/landing/faq';
 import Financing from '@/components/landing/financing';
 import Team from '@/components/landing/team';
 import Consultation from '@/components/landing/consultation';
+import ContactUs from '@/components/landing/contact-us';
 import Footer from '@/components/landing/footer';
 
 export default function Home() {
@@ -34,6 +35,7 @@ export default function Home() {
         <Financing />
         <Team />
         <Consultation />
+        <ContactUs />
       </main>
       <Footer />
     </div>
