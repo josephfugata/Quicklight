@@ -45,6 +45,11 @@ export const metadata: Metadata = {
   authors: [{ name: 'QUICKLIGHT Solar and Lighting Solutions Inc.' }],
   creator: 'QUICKLIGHT Solar and Lighting Solutions Inc.',
   publisher: 'QUICKLIGHT Solar and Lighting Solutions Inc.',
+  icons: {
+    icon: 'https://i.imgur.com/54r9O3J.png',
+    shortcut: 'https://i.imgur.com/54r9O3J.png',
+    apple: 'https://i.imgur.com/54r9O3J.png',
+  },
 };
 
 export default function RootLayout({
