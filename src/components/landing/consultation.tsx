@@ -52,21 +52,26 @@ export default function Consultation() {
   });
 
   async function onSubmit(data: z.infer<typeof FormSchema>) {
-    const result = await bookConsultation(data);
+    toast({
+      variant: 'destructive',
+      title: 'Form Disabled',
+      description: 'This form is not available in the static version of the site.',
+    });
+    // const result = await bookConsultation(data);
 
-    if (result.success) {
-      toast({
-        title: 'Booking Request Sent!',
-        description: `Thank you, ${data.name}. We've received your request and will be in touch shortly to confirm your consultation.`,
-      });
-      form.reset();
-    } else {
-      toast({
-        variant: 'destructive',
-        title: 'Something went wrong.',
-        description: result.message || 'There was an error sending your request. Please try again.',
-      });
-    }
+    // if (result.success) {
+    //   toast({
+    //     title: 'Booking Request Sent!',
+    //     description: `Thank you, ${data.name}. We've received your request and will be in touch shortly to confirm your consultation.`,
+    //   });
+    //   form.reset();
+    // } else {
+    //   toast({
+    //     variant: 'destructive',
+    //     title: 'Something went wrong.',
+    //     description: result.message || 'There was an error sending your request. Please try again.',
+    //   });
+    // }
   }
 
   return (
@@ -84,99 +89,100 @@ export default function Consultation() {
           <CardContent>
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <FormField
-                    control={form.control}
-                    name="name"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Full Name</FormLabel>
-                        <FormControl>
-                          <Input placeholder="John Doe" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Email</FormLabel>
-                        <FormControl>
-                          <Input placeholder="you@example.com" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
-
-                <FormField
-                  control={form.control}
-                  name="preferredDate"
-                  render={({ field }) => (
-                    <FormItem className="flex flex-col">
-                      <FormLabel>Preferred Date</FormLabel>
-                      <Popover>
-                        <PopoverTrigger asChild>
+                <fieldset disabled>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <FormField
+                      control={form.control}
+                      name="name"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Full Name</FormLabel>
                           <FormControl>
-                            <Button
-                              variant={'outline'}
-                              className={cn(
-                                'w-full pl-3 text-left font-normal',
-                                !field.value && 'text-muted-foreground'
-                              )}
-                            >
-                              {field.value ? (
-                                format(field.value, 'PPP')
-                              ) : (
-                                <span>Pick a date</span>
-                              )}
-                              <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
-                            </Button>
+                            <Input placeholder="John Doe" {...field} />
                           </FormControl>
-                        </PopoverTrigger>
-                        <PopoverContent className="w-auto p-0" align="start">
-                          <Calendar
-                            mode="single"
-                            selected={field.value}
-                            onSelect={field.onChange}
-                            disabled={(date) =>
-                              date < new Date() || date < new Date('1900-01-01')
-                            }
-                            initialFocus
-                          />
-                        </PopoverContent>
-                      </Popover>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                
-                <FormField
-                  control={form.control}
-                  name="message"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Message (Optional)</FormLabel>
-                      <FormControl>
-                        <Textarea
-                          placeholder="Tell us about your project or any questions you have..."
-                          className="resize-none"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Email</FormLabel>
+                          <FormControl>
+                            <Input placeholder="you@example.com" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
 
-                <Button type="submit" className="w-full" size="lg" disabled={form.formState.isSubmitting}>
-                  {form.formState.isSubmitting ? 'Sending...' : 'Request My Free Assessment'}
-                  <Send className="ml-2 h-4 w-4" />
-                </Button>
+                  <FormField
+                    control={form.control}
+                    name="preferredDate"
+                    render={({ field }) => (
+                      <FormItem className="flex flex-col mt-6">
+                        <FormLabel>Preferred Date</FormLabel>
+                        <Popover>
+                          <PopoverTrigger asChild>
+                            <FormControl>
+                              <Button
+                                variant={'outline'}
+                                className={cn(
+                                  'w-full pl-3 text-left font-normal',
+                                  !field.value && 'text-muted-foreground'
+                                )}
+                              >
+                                {field.value ? (
+                                  format(field.value, 'PPP')
+                                ) : (
+                                  <span>Pick a date</span>
+                                )}
+                                <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                              </Button>
+                            </FormControl>
+                          </PopoverTrigger>
+                          <PopoverContent className="w-auto p-0" align="start">
+                            <Calendar
+                              mode="single"
+                              selected={field.value}
+                              onSelect={field.onChange}
+                              disabled={(date) =>
+                                date < new Date() || date < new Date('1900-01-01')
+                              }
+                              initialFocus
+                            />
+                          </PopoverContent>
+                        </Popover>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  
+                  <FormField
+                    control={form.control}
+                    name="message"
+                    render={({ field }) => (
+                      <FormItem className='mt-6'>
+                        <FormLabel>Message (Optional)</FormLabel>
+                        <FormControl>
+                          <Textarea
+                            placeholder="Tell us about your project or any questions you have..."
+                            className="resize-none"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <Button type="submit" className="w-full mt-6" size="lg" disabled>
+                    {'Request My Free Assessment'}
+                    <Send className="ml-2 h-4 w-4" />
+                  </Button>
+                </fieldset>
               </form>
             </Form>
           </CardContent>
