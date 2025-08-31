@@ -1,5 +1,7 @@
-import { Clock, Phone, Mail, MapPin } from 'lucide-react';
+import { Clock, Phone, Mail, MapPin, Facebook, Twitter } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import Link from 'next/link';
+import { Button } from '../ui/button';
 
 const contactDetails = [
   {
@@ -58,6 +60,21 @@ export default function ContactUs() {
               </CardContent>
             </Card>
           ))}
+        </div>
+        <div className="mt-12 text-center">
+            <h3 className="font-headline text-2xl font-bold tracking-tighter">Follow Us</h3>
+            <div className="mt-4 flex justify-center gap-4">
+                <Button variant="outline" size="icon" asChild>
+                    <Link href="https://web.facebook.com/QuicklightSolar" target="_blank" aria-label="Facebook">
+                        <Facebook className="h-6 w-6" />
+                    </Link>
+                </Button>
+                <Button variant="outline" size="icon" asChild>
+                    <Link href="https://x.com/QuicklightSolar/" target="_blank" aria-label="X">
+                        <Twitter className="h-6 w-6" />
+                    </Link>
+                </Button>
+            </div>
         </div>
         <div className="mt-12 text-center">
             <p className="text-lg font-semibold">QUICKLIGHT Solar and Lighting Solutions Inc.</p>
