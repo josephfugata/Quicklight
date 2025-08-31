@@ -1,6 +1,16 @@
-import { Sun } from 'lucide-react';
+import { Sun, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+
+const navLinks = [
+    { href: '#why-us', label: 'Why Us' },
+    { href: '#services', label: 'Services' },
+    { href: '#calculator', label: 'Calculator' },
+    { href: '#gallery', label: 'Gallery' },
+    { href: '#testimonials', label: 'Testimonials' },
+    { href: '#faq', label: 'FAQ' },
+];
 
 export default function Header() {
   return (
@@ -12,12 +22,36 @@ export default function Header() {
             Shine Brighter Tomorrow
           </span>
         </Link>
+        
+        <nav className="hidden flex-1 items-center justify-center space-x-4 md:flex">
+          {navLinks.map(link => (
+            <Link key={link.href} href={link.href} className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary">
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+
         <div className="flex flex-1 items-center justify-end space-x-4">
-          <nav className="flex items-center space-x-2">
-            <Button asChild>
-              <Link href="#consultation">Get a Free Quote</Link>
-            </Button>
-          </nav>
+          <Button asChild size="sm">
+            <Link href="#consultation">Get a Free Quote</Link>
+          </Button>
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon" className="md:hidden">
+                <Menu className="h-5 w-5" />
+                <span className="sr-only">Toggle Menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+              <nav className="flex flex-col gap-4 mt-8">
+                 {navLinks.map(link => (
+                    <Link key={link.href} href={link.href} className="block px-2 py-1 text-lg">
+                    {link.label}
+                    </Link>
+                ))}
+              </nav>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </header>
