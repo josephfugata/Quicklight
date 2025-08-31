@@ -64,12 +64,12 @@ export default function ContactUs() {
         <div className="mt-12 text-center">
             <h3 className="font-headline text-2xl font-bold tracking-tighter">Follow Us</h3>
             <div className="mt-4 flex justify-center gap-4">
-                <Button variant="outline" size="icon" asChild>
+                <Button size="icon" asChild>
                     <Link href="https://web.facebook.com/QuicklightSolar" target="_blank" aria-label="Facebook">
                         <Facebook className="h-6 w-6" />
                     </Link>
                 </Button>
-                <Button variant="outline" size="icon" asChild>
+                <Button size="icon" asChild>
                     <Link href="https://x.com/QuicklightSolar/" target="_blank" aria-label="X">
                         <Twitter className="h-6 w-6" />
                     </Link>
