@@ -19,7 +19,7 @@ export default function Header() {
       <div className="container flex h-14 max-w-screen-2xl items-center px-4 md:px-6">
         <Link href="/" className="mr-6 flex items-center space-x-2">
           <Image src="https://i.imgur.com/54r9O3J.png" alt="QuickLight Logo" width={32} height={32} className="h-8 w-8" />
-          <span className="hidden font-bold font-headline sm:inline-block">
+          <span className="font-bold font-headline">
             QUICKLIGHT
           </span>
         </Link>
