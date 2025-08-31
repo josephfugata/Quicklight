@@ -16,7 +16,7 @@ const services = [
     title: 'Grid-Tied Home Solar',
     description: 'Seamlessly integrate solar power into your home, reduce your electricity bills, and gain energy independence with our reliable grid-tied systems.',
     image: {
-      src: 'https://picsum.photos/600/400?random=1',
+      src: 'https://i.imgur.com/brQwWK2.png',
       alt: 'Solar panels on a residential roof',
       hint: 'house solar'
     },
