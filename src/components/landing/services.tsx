@@ -93,8 +93,8 @@ export default function Services() {
                   </div>
                 </div>
               </CardHeader>
-              <CardContent className="flex-grow flex flex-col">
-                <div className="aspect-video overflow-hidden rounded-lg border flex-grow">
+              <CardContent className="flex-grow flex flex-col justify-center">
+                <div className="aspect-video overflow-hidden rounded-lg border">
                   <Image
                     src={service.image.src}
                     alt={service.image.alt}
@@ -105,7 +105,7 @@ export default function Services() {
                   />
                 </div>
               </CardContent>
-              <CardFooter>
+              <CardFooter className="mt-auto">
                 <blockquote className="w-full border-l-4 border-primary pl-4 italic text-sm">
                   <p className="text-foreground/80">"{service.testimonial.text}"</p>
                   <cite className="mt-2 block text-right font-semibold not-italic text-foreground">
