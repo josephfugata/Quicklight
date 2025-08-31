@@ -93,8 +93,8 @@ export default function Services() {
                   </div>
                 </div>
               </CardHeader>
-              <CardContent className="flex-grow">
-                <div className="aspect-video overflow-hidden rounded-lg border">
+              <CardContent className="flex-grow flex flex-col">
+                <div className="aspect-video overflow-hidden rounded-lg border flex-grow">
                   <Image
                     src={service.image.src}
                     alt={service.image.alt}
