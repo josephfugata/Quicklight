@@ -53,7 +53,7 @@ export default function OurTechnology() {
                     <Image
                         src="https://i.imgur.com/OOMdv2C.png"
                         alt="Close-up of a high-efficiency solar panel"
-                        width={600}
+                        width={400}
                         height={500}
                         className="h-full w-full object-cover"
                         data-ai-hint="solar panel close"
