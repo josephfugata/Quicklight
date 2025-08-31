@@ -10,7 +10,7 @@ const projects = [
     category: 'Residential',
   },
   {
-    src: 'https://picsum.photos/600/400?random=6',
+    src: 'https://i.imgur.com/c4mQLvi.png',
     alt: 'Parking lot covered with solar panel carports',
     hint: 'solar carport',
     category: 'Commercial',
