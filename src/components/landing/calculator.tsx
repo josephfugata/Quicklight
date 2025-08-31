@@ -87,27 +87,27 @@ export default function Calculator() {
                 <div className="flex items-center">
                     <Card className="w-full bg-secondary shadow-lg">
                         <CardHeader className="p-4">
-                            <CardTitle className="text-center text-xl font-headline">Your Estimated 25-Year Impact</CardTitle>
+                            <CardTitle className="text-center text-lg font-headline">Your Estimated 25-Year Impact</CardTitle>
                         </CardHeader>
-                        <CardContent className="space-y-4 p-4 md:p-6">
-                            <div className="flex flex-col items-center p-4 rounded-lg bg-primary/10">
-                                <DollarSign className="h-8 w-8 text-primary mb-2" />
+                        <CardContent className="space-y-2 p-4">
+                            <div className="flex flex-col items-center p-3 rounded-lg bg-primary/10">
+                                <DollarSign className="h-6 w-6 text-primary mb-1" />
                                 <span className="text-xs text-muted-foreground">Est. Yearly Savings</span>
-                                <span className="text-3xl font-bold font-headline">
+                                <span className="text-2xl font-bold font-headline">
                                 ₱{yearlySavings.toLocaleString()}
                                 </span>
                             </div>
-                            <div className="flex flex-col items-center p-4 rounded-lg bg-primary/10">
-                                <TrendingUp className="h-8 w-8 text-primary mb-2" />
+                            <div className="flex flex-col items-center p-3 rounded-lg bg-primary/10">
+                                <TrendingUp className="h-6 w-6 text-primary mb-1" />
                                  <span className="text-xs text-muted-foreground">Est. Lifetime Savings</span>
-                                <span className="text-3xl font-bold font-headline">
+                                <span className="text-2xl font-bold font-headline">
                                 ₱{lifetimeSavings.toLocaleString()}
                                 </span>
                             </div>
-                            <div className="flex flex-col items-center p-4 rounded-lg bg-primary/10">
-                                <Leaf className="h-8 w-8 text-primary mb-2" />
+                            <div className="flex flex-col items-center p-3 rounded-lg bg-primary/10">
+                                <Leaf className="h-6 w-6 text-primary mb-1" />
                                 <span className="text-xs text-muted-foreground">Tons of CO2 Reduced</span>
-                                <span className="text-3xl font-bold font-headline">
+                                <span className="text-2xl font-bold font-headline">
                                 {co2Reduction.toLocaleString()}
                                 </span>
                             </div>
