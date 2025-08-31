@@ -25,7 +25,6 @@ import {
 } from '@/components/ui/popover';
 import { Textarea } from '@/components/ui/textarea';
 import { toast } from '@/hooks/use-toast';
-import { bookConsultation } from '@/app/actions';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
 
 const FormSchema = z.object({
@@ -52,26 +51,39 @@ export default function Consultation() {
   });
 
   async function onSubmit(data: z.infer<typeof FormSchema>) {
-    toast({
-      variant: 'destructive',
-      title: 'Form Disabled',
-      description: 'This form is not available in the static version of the site.',
-    });
-    // const result = await bookConsultation(data);
+    const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfhngi7hrjPJ68i7ybnJXlPo1ZhKdBtLekCcktS5S58KQpshQ/formResponse";
+    
+    const formData = new URLSearchParams();
+    formData.append('entry.1477542278', data.name);
+    formData.append('entry.1863678000', data.email);
+    formData.append('entry.1815042143', data.message || '');
+    formData.append('entry.2041386120_year', data.preferredDate.getFullYear().toString());
+    formData.append('entry.2041386120_month', (data.preferredDate.getMonth() + 1).toString());
+    formData.append('entry.2041386120_day', data.preferredDate.getDate().toString());
 
-    // if (result.success) {
-    //   toast({
-    //     title: 'Booking Request Sent!',
-    //     description: `Thank you, ${data.name}. We've received your request and will be in touch shortly to confirm your consultation.`,
-    //   });
-    //   form.reset();
-    // } else {
-    //   toast({
-    //     variant: 'destructive',
-    //     title: 'Something went wrong.',
-    //     description: result.message || 'There was an error sending your request. Please try again.',
-    //   });
-    // }
+    try {
+      await fetch(googleFormUrl, {
+        method: 'POST',
+        mode: 'no-cors', // Important for submitting to Google Forms from a browser
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: formData.toString(),
+      });
+
+      toast({
+        title: 'Booking Request Sent!',
+        description: `Thank you, ${data.name}. We've received your request and will be in touch shortly to confirm your consultation.`,
+      });
+      form.reset();
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        variant: 'destructive',
+        title: 'Something went wrong.',
+        description: 'There was an error sending your request. Please try again.',
+      });
+    }
   }
 
   return (
@@ -89,7 +101,6 @@ export default function Consultation() {
           <CardContent>
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <fieldset disabled>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <FormField
                       control={form.control}
@@ -178,11 +189,10 @@ export default function Consultation() {
                       </FormItem>
                     )}
                   />
-                  <Button type="submit" className="w-full mt-6" size="lg" disabled>
+                  <Button type="submit" className="w-full mt-6" size="lg">
                     {'Request My Free Assessment'}
                     <Send className="ml-2 h-4 w-4" />
                   </Button>
-                </fieldset>
               </form>
             </Form>
           </CardContent>
