@@ -4,7 +4,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { format } from 'date-fns';
-import { Calendar as CalendarIcon, Send } from 'lucide-react';
+import { Calendar as CalendarIcon, Send, Clock } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -34,8 +34,14 @@ const FormSchema = z.object({
   email: z.string().email({
     message: 'Please enter a valid email address.',
   }),
+  phone: z.string().min(10, {
+    message: 'Please enter a valid phone number.',
+  }),
   preferredDate: z.date({
     required_error: 'A preferred date is required.',
+  }),
+  preferredTime: z.string().regex(/^([01]\d|2[0-3]):([0-5]\d)$/, {
+    message: 'Please enter a valid time in HH:MM format.',
   }),
   message: z.string().optional(),
 });
@@ -46,7 +52,9 @@ export default function Consultation() {
     defaultValues: {
       name: '',
       email: '',
+      phone: '',
       message: '',
+      preferredTime: '09:00',
     }
   });
 
@@ -56,15 +64,22 @@ export default function Consultation() {
     const formData = new URLSearchParams();
     formData.append('entry.1477542278', data.name);
     formData.append('entry.1863678000', data.email);
-    formData.append('entry.1815042143', data.message || '');
+    formData.append('entry.864263134', data.phone);
+    
     formData.append('entry.2041386120_year', data.preferredDate.getFullYear().toString());
     formData.append('entry.2041386120_month', (data.preferredDate.getMonth() + 1).toString());
     formData.append('entry.2041386120_day', data.preferredDate.getDate().toString());
+    
+    const [hour, minute] = data.preferredTime.split(':');
+    formData.append('entry.975787232_hour', hour);
+    formData.append('entry.975787232_minute', minute);
+
+    formData.append('entry.1815042143', data.message || '');
 
     try {
       await fetch(googleFormUrl, {
         method: 'POST',
-        mode: 'no-cors', // Important for submitting to Google Forms from a browser
+        mode: 'no-cors',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
@@ -129,48 +144,80 @@ export default function Consultation() {
                       )}
                     />
                   </div>
-
+                  
                   <FormField
-                    control={form.control}
-                    name="preferredDate"
-                    render={({ field }) => (
-                      <FormItem className="flex flex-col mt-6">
-                        <FormLabel>Preferred Date</FormLabel>
-                        <Popover>
-                          <PopoverTrigger asChild>
+                      control={form.control}
+                      name="phone"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Phone Number</FormLabel>
+                          <FormControl>
+                            <Input placeholder="09171234567" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-end">
+                    <FormField
+                      control={form.control}
+                      name="preferredDate"
+                      render={({ field }) => (
+                        <FormItem className="flex flex-col mt-2">
+                          <FormLabel>Preferred Date</FormLabel>
+                          <Popover>
+                            <PopoverTrigger asChild>
+                              <FormControl>
+                                <Button
+                                  variant={'outline'}
+                                  className={cn(
+                                    'w-full pl-3 text-left font-normal',
+                                    !field.value && 'text-muted-foreground'
+                                  )}
+                                >
+                                  {field.value ? (
+                                    format(field.value, 'PPP')
+                                  ) : (
+                                    <span>Pick a date</span>
+                                  )}
+                                  <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                                </Button>
+                              </FormControl>
+                            </PopoverTrigger>
+                            <PopoverContent className="w-auto p-0" align="start">
+                              <Calendar
+                                mode="single"
+                                selected={field.value}
+                                onSelect={field.onChange}
+                                disabled={(date) =>
+                                  date < new Date() || date < new Date('1900-01-01')
+                                }
+                                initialFocus
+                              />
+                            </PopoverContent>
+                          </Popover>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                     <FormField
+                        control={form.control}
+                        name="preferredTime"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Preferred Time</FormLabel>
                             <FormControl>
-                              <Button
-                                variant={'outline'}
-                                className={cn(
-                                  'w-full pl-3 text-left font-normal',
-                                  !field.value && 'text-muted-foreground'
-                                )}
-                              >
-                                {field.value ? (
-                                  format(field.value, 'PPP')
-                                ) : (
-                                  <span>Pick a date</span>
-                                )}
-                                <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
-                              </Button>
+                              <div className="relative flex items-center">
+                                <Clock className="absolute left-3 h-4 w-4 text-muted-foreground" />
+                                <Input type="time" className="pl-10" {...field} />
+                              </div>
                             </FormControl>
-                          </PopoverTrigger>
-                          <PopoverContent className="w-auto p-0" align="start">
-                            <Calendar
-                              mode="single"
-                              selected={field.value}
-                              onSelect={field.onChange}
-                              disabled={(date) =>
-                                date < new Date() || date < new Date('1900-01-01')
-                              }
-                              initialFocus
-                            />
-                          </PopoverContent>
-                        </Popover>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                  </div>
                   
                   <FormField
                     control={form.control}
