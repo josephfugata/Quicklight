@@ -1,17 +1,40 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useCallback } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Slider } from '@/components/ui/slider';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { DollarSign, Leaf, TrendingUp } from 'lucide-react';
 
+// Define the range for the electricity bill
+const MIN_BILL = 1000;
+const MAX_BILL = 500000;
+
+// Logarithmic scale functions
+// Convert a linear slider value (0-100) to a logarithmic bill amount
+const logValue = (position: number) => {
+  const min = Math.log(MIN_BILL);
+  const max = Math.log(MAX_BILL);
+  const scale = (max - min) / 100;
+  return Math.round(Math.exp(min + scale * position));
+};
+
+// Convert a bill amount back to a linear slider position (0-100)
+const logPosition = (value: number) => {
+  const min = Math.log(MIN_BILL);
+  const max = Math.log(MAX_BILL);
+  const scale = (max - min) / 100;
+  return (Math.log(value) - min) / scale;
+};
+
+
 export default function Calculator() {
-  const [monthlyBill, setMonthlyBill] = useState(5000);
+  const [monthlyBill, setMonthlyBill] = useState(2000);
 
   const { yearlySavings, lifetimeSavings, co2Reduction } = useMemo(() => {
-    const yearlyBill = monthlyBill * 12;
+    const bill = Math.max(MIN_BILL, Math.min(MAX_BILL, monthlyBill));
+    const yearlyBill = bill * 12;
     // Assuming 85% savings with solar
     const yearlySavings = yearlyBill * 0.85;
     const lifetimeSavings = yearlySavings * 25; // 25-year lifespan
@@ -20,7 +43,7 @@ export default function Calculator() {
     const AVG_KWH_PRICE = 11; // Average price per kWh in PHP
     const CO2_PER_KWH = 0.7; // kg of CO2 per kWh for PH grid electricity
 
-    const monthlyKwh = monthlyBill / AVG_KWH_PRICE;
+    const monthlyKwh = bill / AVG_KWH_PRICE;
     const lifetimeCo2Kg = monthlyKwh * 12 * 25 * CO2_PER_KWH;
     const co2Reduction = Math.round(lifetimeCo2Kg / 1000); // in metric tons
 
@@ -31,16 +54,23 @@ export default function Calculator() {
     };
   }, [monthlyBill]);
 
-  const handleSliderChange = (value: number[]) => {
-    setMonthlyBill(value[0]);
-  };
+  const handleSliderChange = useCallback((value: number[]) => {
+    setMonthlyBill(logValue(value[0]));
+  }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = parseInt(e.target.value, 10);
-    if (!isNaN(value)) {
-      setMonthlyBill(value);
+    let value = parseInt(e.target.value, 10);
+    if (isNaN(value)) {
+        value = MIN_BILL;
     }
+    setMonthlyBill(value);
   };
+  
+  const sliderPosition = useMemo(() => {
+    const bill = Math.max(MIN_BILL, Math.min(MAX_BILL, monthlyBill));
+    return [logPosition(bill)];
+  }, [monthlyBill]);
+
 
   return (
     <section id="calculator" className="w-full py-12 md:py-20 lg:py-24">
@@ -70,15 +100,16 @@ export default function Calculator() {
                                     value={monthlyBill}
                                     onChange={handleInputChange}
                                     className="w-36 text-xl font-bold font-headline h-10"
-                                    max={50000}
+                                    min={MIN_BILL}
+                                    max={MAX_BILL}
                                 />
                                 </div>
                             </div>
                             <Slider
-                                value={[monthlyBill]}
+                                value={sliderPosition}
                                 onValueChange={handleSliderChange}
-                                max={50000}
-                                step={100}
+                                max={100}
+                                step={0.1}
                                 aria-label="Monthly Bill Slider"
                             />
                         </div>
