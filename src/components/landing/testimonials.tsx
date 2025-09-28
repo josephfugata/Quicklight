@@ -5,25 +5,25 @@ import { Star } from 'lucide-react';
 
 const testimonials = [
   {
-    name: 'Maria Dela Cruz',
-    location: 'Quezon City',
-    avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026704d',
+    name: 'Rodehlia Macaspac, MBA, Ed.D',
+    location: 'Assistant Dean, Our Lady of Fatima University',
+    avatar: 'https://i.pravatar.cc/150?u=rodehliam',
     rating: 5,
-    text: "From the initial quote to the final installation, the process was incredibly smooth. The team was professional, and our electric bill has been close to zero ever since. Highly recommended!",
+    text: "The solar light was delivered quickly and with all parts fully intact. We initially exposed the solar panel to the daylight sun, and it’s battery became full in 6 hours. At night, it lighted the garden beautifully, especially the staircase. It made our area safer with its bright light. A satisfied product user here.",
   },
   {
-    name: 'John Lloyd Santos',
-    location: 'Cebu City',
-    avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026705e',
+    name: 'GOLDILOCKS BAKESHOP CORPORATION',
+    location: 'Director',
+    avatar: 'https://i.pravatar.cc/150?u=goldilocks',
     rating: 5,
-    text: "I was hesitant about the upfront cost, but the financing options made it manageable. The long-term savings are undeniable. The best investment I've made for my home.",
+    text: "Quicklight Solar Corporation is a trusted company for solar panels and other items. Also, the support and service is outstanding. They suggest what’s the best for our office and store needs. From inspection, survey to installation staff are knowledgeable on the products. Great customer service! I recommend Quicklight Solar Thank you,",
   },
   {
-    name: 'The Reyes Family',
-    location: 'Davao City',
-    avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026706f',
+    name: 'Venus B. Raj',
+    location: 'Miss Universe 2010 4th Runner-up',
+    avatar: 'https://i.pravatar.cc/150?u=venusraj',
     rating: 5,
-    text: "Their customer service is top-notch. They answered all our questions patiently and the after-sales support has been fantastic. We feel secure in our choice.",
+    text: "Because of the devastation that happened in Bicol recently, i’m just glad that Quicklight Solar sent me a solar panel that I can bring to my home in Bicol. The power supply there has been cut, and this would be very helpful to my family in this trying time! Honestly, i’m really happy that my family gets to use quicklight! What a useful thing to have!",
   },
 ];
 
