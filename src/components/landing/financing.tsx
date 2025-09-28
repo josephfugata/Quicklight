@@ -30,14 +30,6 @@ export default function Financing() {
                   Under the Renewable Energy Act of 2008, you can enroll in the Net Metering program. Export your excess solar energy to the grid and earn credits that will be deducted from your monthly electricity bill, significantly reducing your costs.
                 </AccordionContent>
               </AccordionItem>
-              <AccordionItem value="item-2">
-                <AccordionTrigger className="text-lg font-semibold font-headline">
-                  Bank Financing & Green Loans
-                </AccordionTrigger>
-                <AccordionContent className="text-base text-muted-foreground">
-                  Major banks across the Philippines offer specialized "Green Loans" for renewable energy projects. We can assist you in preparing the necessary documents to apply for financing to make your solar investment more manageable.
-                </AccordionContent>
-              </AccordionItem>
               <AccordionItem value="item-3">
                 <AccordionTrigger className="text-lg font-semibold font-headline">
                   In-House Flexible Financing
