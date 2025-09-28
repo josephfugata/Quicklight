@@ -76,6 +76,11 @@ const externalServices = [
         title: 'Energy Management',
         description: 'Optimize your energy consumption with advanced management systems. We partner with industry leaders to provide comprehensive solutions.',
         link: 'https://google.com', // Replace with the actual external link
+        image: {
+            src: 'https://picsum.photos/seed/energymgmt/600/400',
+            alt: 'Smart home dashboard showing energy consumption',
+            hint: 'smart home energy'
+        }
     }
 ]
 
@@ -126,27 +131,43 @@ export default function Services() {
             </Card>
           ))}
           {externalServices.map((service) => (
-             <Card key={service.title} className="flex flex-col overflow-hidden">
-              <CardHeader>
-                <div className="flex items-start gap-4">
-                  {service.icon}
-                  <div>
-                    <CardTitle className="font-headline text-xl">{service.title}</CardTitle>
-                    <CardDescription className="mt-1">{service.description}</CardDescription>
-                  </div>
+             <Card key={service.title} className="md:col-span-2 flex flex-col overflow-hidden">
+                <div className="grid md:grid-cols-2 gap-6 items-center">
+                    <div>
+                        <CardHeader>
+                            <div className="flex items-start gap-4">
+                            {service.icon}
+                            <div>
+                                <CardTitle className="font-headline text-xl">{service.title}</CardTitle>
+                                <CardDescription className="mt-1">{service.description}</CardDescription>
+                            </div>
+                            </div>
+                        </CardHeader>
+                        <CardContent>
+                            <p className='text-muted-foreground text-center mb-4'>Learn more about our advanced energy management solutions through our partner website.</p>
+                            <Button asChild className="w-full">
+                                <Link href={service.link} target="_blank">
+                                    Learn More
+                                </Link>
+                            </Button>
+                        </CardContent>
+                    </div>
+                    <div className="p-6">
+                        <div className="aspect-video overflow-hidden rounded-lg border">
+                        <Image
+                            src={service.image.src}
+                            alt={service.image.alt}
+                            width={600}
+                            height={400}
+                            className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                            data-ai-hint={service.image.hint}
+                        />
+                        </div>
+                    </div>
                 </div>
-              </CardHeader>
-              <CardContent className="flex-grow flex flex-col justify-center items-center">
-                <p className='text-muted-foreground text-center mb-4'>Learn more about our advanced energy management solutions through our partner website.</p>
-                <Button asChild>
-                    <Link href={service.link} target="_blank">
-                        Learn More
-                    </Link>
-                </Button>
-              </CardContent>
-               <CardFooter>
-                 <blockquote className="w-full border-l-4 border-primary pl-4 italic text-sm">
-                 </blockquote>
+              <CardFooter className="mt-auto">
+                <blockquote className="w-full border-l-4 border-primary pl-4 italic text-sm">
+                </blockquote>
               </CardFooter>
             </Card>
           ))}
