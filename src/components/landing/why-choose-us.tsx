@@ -35,7 +35,7 @@ export default function WhyChooseUs() {
             Your Trusted Partner in Solar
           </h2>
           <p className="mt-4 text-muted-foreground md:text-xl">
-            We are committed to making your transition to clean energy seamless, reliable, and rewarding.
+            We are Builders of the Future! Solar is not only a free energy resource, but it is also the most environment-friendly energy solution. The significant feel-good return of doing something that is environmentally right drives us. We help our customers capitalize on our country’s innate advantages on the solar front, for we believe that it is time to put the power in your hands, the time to go Solar is NOW!
           </p>
         </div>
         <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
