@@ -7,8 +7,9 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { Home, Lightbulb, TrafficCone, Waypoints } from 'lucide-react';
-import { Badge } from '../ui/badge';
+import { Home, Lightbulb, TrafficCone, Waypoints, Zap, Network } from 'lucide-react';
+import Link from 'next/link';
+import { Button } from '../ui/button';
 
 const services = [
   {
@@ -26,9 +27,23 @@ const services = [
     },
   },
   {
+    icon: <Network className="mb-4 h-8 w-8 text-primary" />,
+    title: 'Net Metering & Power Quality Analysis',
+    description: 'Export excess solar energy back to the grid and get credited on your bill. We also provide power quality analysis to ensure your system is optimized.',
+    image: {
+      src: 'https://i.imgur.com/aHHXKqE.png',
+      alt: 'Chart showing energy production and consumption',
+      hint: 'energy chart'
+    },
+    testimonial: {
+      text: 'Understanding our energy flow with the analysis helped us save even more than we expected. It\'s a brilliant service.',
+      author: 'A. Fernandez',
+    },
+  },
+  {
     icon: <Lightbulb className="mb-4 h-8 w-8 text-primary" />,
-    title: 'Solar Street Lights',
-    description: 'Illuminate communities with our high-performance, autonomous solar street lights. Perfect for roads, parks, and public spaces, ensuring safety and sustainability.',
+    title: 'Solar Street Lights (HVAC Affiliated)',
+    description: 'Illuminate communities with our high-performance solar street lights, affiliated with HVAC for top-tier quality and reliability.',
     image: {
       src: 'https://i.imgur.com/TlJqrRA.png',
       alt: 'A solar-powered street light at dusk',
@@ -53,21 +68,16 @@ const services = [
       author: 'Department of Transportation',
     },
   },
-  {
-    icon: <Waypoints className="mb-4 h-8 w-8 text-primary" />,
-    title: 'Solar Road Studs',
-    description: 'Improve nighttime visibility and lane delineation with our bright, robust solar road studs. Easy installation and long-lasting performance.',
-    image: {
-      src: 'https://i.imgur.com/PkGdKDC.png',
-      alt: 'Glowing solar road studs on a highway at night',
-      hint: 'road night'
-    },
-    testimonial: {
-      text: 'The solar road studs have significantly improved driver confidence on our rural highways at night.',
-      author: 'Regional Infrastructure Manager',
-    },
-  },
 ];
+
+const externalServices = [
+    {
+        icon: <Zap className="mb-4 h-8 w-8 text-primary" />,
+        title: 'Energy Management',
+        description: 'Optimize your energy consumption with advanced management systems. We partner with industry leaders to provide comprehensive solutions.',
+        link: 'https://google.com', // Replace with the actual external link
+    }
+]
 
 export default function Services() {
   return (
@@ -112,6 +122,31 @@ export default function Services() {
                     - {service.testimonial.author}
                   </cite>
                 </blockquote>
+              </CardFooter>
+            </Card>
+          ))}
+          {externalServices.map((service) => (
+             <Card key={service.title} className="flex flex-col overflow-hidden">
+              <CardHeader>
+                <div className="flex items-start gap-4">
+                  {service.icon}
+                  <div>
+                    <CardTitle className="font-headline text-xl">{service.title}</CardTitle>
+                    <CardDescription className="mt-1">{service.description}</CardDescription>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent className="flex-grow flex flex-col justify-center items-center">
+                <p className='text-muted-foreground text-center mb-4'>Learn more about our advanced energy management solutions through our partner website.</p>
+                <Button asChild>
+                    <Link href={service.link} target="_blank">
+                        Learn More
+                    </Link>
+                </Button>
+              </CardContent>
+               <CardFooter>
+                 <blockquote className="w-full border-l-4 border-primary pl-4 italic text-sm">
+                 </blockquote>
               </CardFooter>
             </Card>
           ))}
