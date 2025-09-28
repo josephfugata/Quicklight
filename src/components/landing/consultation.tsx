@@ -88,7 +88,7 @@ export default function Consultation() {
 
   return (
     <section id="consultation" className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
-      <div className="container px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6">
         <Card className="mx-auto max-w-2xl shadow-lg">
           <CardHeader className="text-center">
             <CardTitle className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">

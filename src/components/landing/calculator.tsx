@@ -44,7 +44,7 @@ export default function Calculator() {
 
   return (
     <section id="calculator" className="w-full py-12 md:py-20 lg:py-24">
-      <div className="container px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6">
         <div className="mx-auto max-w-5xl">
             <div className="grid gap-8 md:grid-cols-2 lg:gap-12">
                 <div className="flex flex-col justify-center space-y-4">
