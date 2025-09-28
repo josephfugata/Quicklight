@@ -77,7 +77,7 @@ const externalServices = [
         description: 'Optimize your energy consumption with advanced management systems. We partner with industry leaders to provide comprehensive solutions.',
         link: 'https://google.com', // Replace with the actual external link
         image: {
-            src: 'https://picsum.photos/seed/energymgmt/600/400',
+            src: '/green energy.avif',
             alt: 'Smart home dashboard showing energy consumption',
             hint: 'smart home energy'
         }
