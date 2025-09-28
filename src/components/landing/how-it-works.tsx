@@ -35,7 +35,7 @@ export default function HowItWorks() {
     <section id="how-it-works" className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mx-auto max-w-3xl text-center">
-          <Badge variant="outline" className="mb-2">Our Process</Badge>
+          <Badge variant="accent" className="mb-2">Our Process</Badge>
           <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             Going Solar in 5 Simple Steps
           </h2>

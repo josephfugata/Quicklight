@@ -12,7 +12,7 @@ export default function Financing() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 mx-auto max-w-5xl">
           <div className="space-y-4">
-            <Badge variant="outline">Financial Incentives</Badge>
+            <Badge variant="accent">Financial Incentives</Badge>
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
               Making Solar Affordable For Every Filipino
             </h2>
