@@ -6,7 +6,7 @@ import { Star } from 'lucide-react';
 const testimonials = [
   {
     name: 'Rodehlia Macaspac, MBA, Ed.D',
-    location: 'Assistant Dean, Our Lady of Fatima University',
+    location: 'Assistant Dean, Our Lady of Fatima University, Graduate School and Manager at Center for Professional Development and Academic Partnership',
     avatar: 'https://i.pravatar.cc/150?u=rodehliam',
     rating: 5,
     text: "The solar light was delivered quickly and with all parts fully intact. We initially exposed the solar panel to the daylight sun, and it’s battery became full in 6 hours. At night, it lighted the garden beautifully, especially the staircase. It made our area safer with its bright light. A satisfied product user here.",
@@ -20,7 +20,7 @@ const testimonials = [
   },
   {
     name: 'Venus B. Raj',
-    location: 'Miss Universe 2010 4th Runner-up',
+    location: 'Miss Universe 2010 4th Runner-up & Bb. Pilipinas-Universe 2010.',
     avatar: 'https://i.pravatar.cc/150?u=venusraj',
     rating: 5,
     text: "Because of the devastation that happened in Bicol recently, i’m just glad that Quicklight Solar sent me a solar panel that I can bring to my home in Bicol. The power supply there has been cut, and this would be very helpful to my family in this trying time! Honestly, i’m really happy that my family gets to use quicklight! What a useful thing to have!",
