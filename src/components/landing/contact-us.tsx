@@ -12,7 +12,7 @@ const contactDetails = [
   {
     icon: <Phone className="h-8 w-8 text-primary" />,
     title: 'Contact Us',
-    lines: ['+63 915-3153391', '+63 921-2397720'],
+    lines: ['+63917 626 9698'],
   },
   {
     icon: <Mail className="h-8 w-8 text-primary" />,
@@ -23,9 +23,8 @@ const contactDetails = [
     icon: <MapPin className="h-8 w-8 text-primary" />,
     title: 'Our Company Address',
     lines: [
-      '10-1 One Global Place,',
-      '5th Avenue corner 5th Street,',
-      'Fort Bonifacio, Taguig City, 1634, Philippines',
+      'Altica Arcade, Circumferential Road,',
+      'Antipolo City, Rizal.',
     ],
   },
 ];
