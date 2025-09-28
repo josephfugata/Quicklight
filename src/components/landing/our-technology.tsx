@@ -5,7 +5,7 @@ import { CheckCircle } from 'lucide-react';
 
 const techHighlights = [
   {
-    name: 'Tier-1 Monocrystalline Panels',
+    name: 'Tier-1 Monocrystalline and Bi-Facial Panels',
     description: 'Maximum efficiency and a sleek, low-profile design to complement your home\'s aesthetics.',
   },
   {
