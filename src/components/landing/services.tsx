@@ -47,7 +47,7 @@ const services = [
     title: 'Heating, Ventilation and Air Conditioning (HVAC)',
     description: 'Efficient HVAC solutions to ensure comfort in your home or business, powered by clean energy.',
     image: {
-      src: 'https://picsum.photos/seed/hvac1/600/400',
+      src: 'https://i.imgur.com/4buW65o.png',
       alt: 'An HVAC unit on the side of a building.',
       hint: 'HVAC unit'
     },
