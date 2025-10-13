@@ -50,7 +50,7 @@ export default function Environmental() {
         </div>
         <div className="flex justify-center">
             <Image
-                src="https://i.imgur.com/aHHXKqE.png"
+                src="/Powering a Greener Planet.webp"
                 alt="Image of a lush green landscape with a clear blue sky"
                 width="600"
                 height="600"
