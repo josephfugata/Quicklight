@@ -4,7 +4,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { format } from 'date-fns';
-import { Calendar as CalendarIcon, Send, Clock } from 'lucide-react';
+import { Calendar as CalendarIcon, Send } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -209,10 +209,7 @@ export default function Consultation() {
                           <FormItem>
                             <FormLabel>Preferred Time</FormLabel>
                             <FormControl>
-                              <div className="relative flex items-center">
-                                <Clock className="absolute left-3 h-4 w-4 text-muted-foreground" />
-                                <Input type="time" className="pl-10" {...field} aria-label="Preferred Time" />
-                              </div>
+                                <Input type="time" {...field} aria-label="Preferred Time" />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
