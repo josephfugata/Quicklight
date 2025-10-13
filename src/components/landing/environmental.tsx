@@ -5,17 +5,17 @@ import { Wind, Droplets, Globe } from 'lucide-react';
 const stats = [
   {
     icon: <Wind className="h-8 w-8 text-primary" />,
-    value: 'Cleaner Air',
+    title: 'Cleaner Air',
     description: 'Reduces harmful emissions from fossil fuels, improving local air quality.',
   },
   {
     icon: <Droplets className="h-8 w-8 text-primary" />,
-    value: 'Water Conservation',
+    title: 'Water Conservation',
     description: 'Solar power requires little to no water to operate, unlike traditional power plants.',
   },
   {
     icon: <Globe className="h-8 w-8 text-primary" />,
-    value: 'Climate Action',
+    title: 'Climate Action',
     description: 'Directly combats climate change by providing a clean, zero-emission energy source.',
   },
 ];
@@ -36,12 +36,12 @@ export default function Environmental() {
             </p>
             <div className="grid gap-6 mt-6 sm:grid-cols-1">
                 {stats.map((stat) => (
-                    <div key={stat.value} className="flex items-start gap-4">
+                    <div key={stat.title} className="flex items-start gap-4">
                         <div className="bg-primary/10 p-3 rounded-full">
                            {stat.icon}
                         </div>
                         <div>
-                            <h3 className="text-lg font-bold">{stat.value}</h3>
+                            <h3 className="text-lg font-bold">{stat.title}</h3>
                             <p className="text-muted-foreground">{stat.description}</p>
                         </div>
                     </div>
@@ -51,7 +51,7 @@ export default function Environmental() {
         <div className="flex justify-center">
             <Image
                 src="/Powering a Greener Planet.webp"
-                alt="Image of a lush green landscape with a clear blue sky"
+                alt="Illustration of a lush green landscape with wind turbines and a clear blue sky, representing clean energy."
                 width="600"
                 height="600"
                 className="rounded-xl object-cover aspect-square"

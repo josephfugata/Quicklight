@@ -7,7 +7,7 @@ export default function Hero() {
     <section className="relative h-[80vh] min-h-[500px] w-full">
       <Image
         src="/Hero.jpeg"
-        alt="Solar panels on a modern house roof"
+        alt="Solar panels on a modern house roof at sunset, showcasing clean energy solutions."
         fill
         className="object-cover"
         data-ai-hint="solar panels sunset"

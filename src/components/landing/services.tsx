@@ -29,7 +29,7 @@ const services = [
     description: 'Seamlessly integrate solar power into your home, reduce your electricity bills, and gain energy independence with our reliable grid-tied systems.',
     image: {
       src: '/Solar Homes.webp',
-      alt: 'Solar panels on a residential roof',
+      alt: 'A modern home with solar panels installed on the roof.',
       hint: 'house solar'
     },
   },
@@ -39,7 +39,7 @@ const services = [
     description: 'Export excess solar energy back to the grid and get credited on your bill. We also provide power quality analysis to ensure your system is optimized.',
     image: {
       src: '/Net-Metering.webp',
-      alt: 'Chart showing energy production and consumption',
+      alt: 'A dashboard showing power quality analysis and net metering savings.',
       hint: 'energy chart'
     },
   },
@@ -49,7 +49,7 @@ const services = [
     description: 'Illuminate communities with our high-performance solar street lights, known for top-tier quality and reliability.',
     image: {
       src: '/Solar Street Lights.webp',
-      alt: 'A solar-powered street light at dusk',
+      alt: 'An illuminated solar-powered street light against a dusk sky.',
       hint: 'solar streetlight'
     },
   },
@@ -59,7 +59,7 @@ const services = [
     description: 'Efficient HVAC solutions to ensure comfort in your home or business, powered by clean energy.',
     image: {
       src: '/HVAC.webp',
-      alt: 'An HVAC unit on the side of a building.',
+      alt: 'An efficient HVAC unit installed on the side of a commercial building.',
       hint: 'HVAC unit'
     },
   },
@@ -72,7 +72,7 @@ const comingSoonServices = [
         description: 'Take full control of your energy future. Our upcoming platform will empower you to monitor production, track savings, and optimize consumption in real-time.',
         image: {
             src: '/green energy.avif',
-            alt: 'Smart home dashboard showing energy consumption',
+            alt: 'A preview of the QUICKLIGHT Energy Management dashboard on a tablet.',
             hint: 'smart home energy'
         }
     }

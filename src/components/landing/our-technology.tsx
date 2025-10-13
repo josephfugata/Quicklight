@@ -54,7 +54,7 @@ export default function OurTechnology() {
                 <CardContent className="p-0">
                     <Image
                         src="/Engineered for Performance.webp"
-                        alt="Close-up of a high-efficiency solar panel"
+                        alt="A close-up of a high-efficiency monocrystalline solar panel showing its sleek design."
                         width={400}
                         height={500}
                         className="h-full w-full object-cover"

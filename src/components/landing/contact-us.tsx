@@ -66,14 +66,14 @@ export default function ContactUs() {
                 <Card className="w-full max-w-lg shadow-lg hover:shadow-xl transition-shadow">
                     <CardContent className="p-6 flex flex-col sm:flex-row items-center justify-between gap-4 pt-6">
                         <div className="flex items-center gap-4">
-                            <Facebook className="h-10 w-10 text-[#1877F2] flex-shrink-0" />
+                            <Facebook className="h-10 w-10 text-[#1877F2]" aria-hidden="true" />
                             <div>
                                 <p className="font-bold text-lg text-left">Follow us on Facebook</p>
                                 <p className="text-sm text-muted-foreground text-left">Get the latest updates and see our projects.</p>
                             </div>
                         </div>
                         <Button asChild className="w-full sm:w-auto mt-4 sm:mt-0 flex-shrink-0">
-                            <Link href="https://web.facebook.com/QuicklightSolar" target="_blank" aria-label="Facebook">
+                            <Link href="https://web.facebook.com/QuicklightSolar" target="_blank" aria-label="Follow QUICKLIGHT on Facebook">
                                 Visit Page
                             </Link>
                         </Button>

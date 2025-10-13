@@ -82,4 +82,3 @@ To get a local copy up and running, follow these simple steps.
     npm run dev
     ```
 4.  Open [http://localhost:9002](http://localhost:9002) to view it in the browser.
-

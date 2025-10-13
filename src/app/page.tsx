@@ -14,10 +14,12 @@ import Financing from '@/components/landing/financing';
 import Consultation from '@/components/landing/consultation';
 import ContactUs from '@/components/landing/contact-us';
 import Footer from '@/components/landing/footer';
+import StructuredData from '@/components/landing/structured-data';
 
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
+      <StructuredData />
       <Header />
       <main className="flex-1">
         <Hero />
