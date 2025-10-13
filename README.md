@@ -53,9 +53,8 @@ This project is a testament to my ability to deliver high-quality, modern web ap
 
 I am passionate about building exceptional web experiences that drive results. If you are looking for a developer who can bring your vision to life with clean, efficient, and maintainable code, I would love to connect.
 
--   **Portfolio**: [Your Portfolio Link Here]
--   **LinkedIn**: [Your LinkedIn Profile URL Here]
--   **Email**: [Your Email Here]
+-   **Portfolio**: https://pinoyentrepreneur.me
+-   **Email**: mail@pinoyentrepreneur.me
 
 ---
 
@@ -83,5 +82,3 @@ To get a local copy up and running, follow these simple steps.
     npm run dev
     ```
 4.  Open [http://localhost:9002](http://localhost:9002) to view it in the browser.
-
-This project was prototyped with the assistance of an AI coding partner in **Firebase Studio**.
