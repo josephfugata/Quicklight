@@ -1,10 +1,2 @@
-# See https://www.robotstxt.org/robotstxt.html for documentation on how to use the robots.txt file
-#
-# To allow all crawlers to access all parts of your site, leave this file as is.
-# To prevent all crawlers from accessing your site, replace the line "Disallow:"
-# with "Disallow: /".
-
 User-agent: *
-Disallow:
-
-Sitemap: https://quicklightcorp.com/sitemap.xml
+Allow: /
