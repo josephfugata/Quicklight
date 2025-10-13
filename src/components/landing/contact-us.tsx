@@ -17,7 +17,7 @@ const contactDetails = [
   {
     icon: <Mail className="h-8 w-8 text-primary" />,
     title: 'Email Us',
-    lines: ['info@quicklightcorp.com'],
+    lines: ['info@quicklight.pinoyentrepreneur.me'],
   },
   {
     icon: <MapPin className="h-8 w-8 text-primary" />,

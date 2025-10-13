@@ -4,7 +4,7 @@
 
 This repository contains the source code for the QUICKLIGHT landing page, a modern, responsive, and high-performance website built to showcase solar energy solutions. This project serves as a comprehensive example of a production-quality web application developed with a modern tech stack.
 
-**Live Demo:** [https://quicklightcorp.com](https://quicklightcorp.com)
+**Live Demo:** [https://quicklight.pinoyentrepreneur.me/](https://quicklight.pinoyentrepreneur.me/)
 
 ---
 
@@ -82,3 +82,4 @@ To get a local copy up and running, follow these simple steps.
     npm run dev
     ```
 4.  Open [http://localhost:9002](http://localhost:9002) to view it in the browser.
+

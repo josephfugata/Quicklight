@@ -17,13 +17,13 @@ const fontPtSans = PT_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://quicklightcorp.com'),
+  metadataBase: new URL('https://quicklight.pinoyentrepreneur.me/'),
   title: 'QUICKLIGHT | Solar Panel & Lighting Solutions Philippines',
   description: 'QUICKLIGHT offers affordable and reliable solar panel systems, solar street lights, and traffic solutions in the Philippines. Lower your bills and embrace clean energy. Get your free quote today!',
   openGraph: {
     title: 'QUICKLIGHT | Solar Panel & Lighting Solutions Philippines',
     description: 'QUICKLIGHT offers affordable and reliable solar panel systems, solar street lights, and traffic solutions in the Philippines. Lower your bills and embrace clean energy. Get your free quote today!',
-    url: 'https://quicklightcorp.com',
+    url: 'https://quicklight.pinoyentrepreneur.me/',
     siteName: 'QUICKLIGHT',
     images: [
       {
