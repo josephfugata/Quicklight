@@ -4,26 +4,26 @@
 
 @layer base {
   :root {
-    --background: 195 53% 96%; /* Very light teal */
-    --foreground: 222.2 84% 4.9%;
+    --background: 195 60% 97%; /* Lighter Teal-White */
+    --foreground: 224 71% 4%; /* Darker Blue-Black */
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 224 71% 4%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 224 71% 4%;
 
     --primary: 195 53% 35%; /* Main Teal */
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 98%; /* Light gray for secondary elements */
+    --secondary: 210 40% 96.1%; /* Lighter Gray */
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted-foreground: 215.4 16.3% 40%; /* Darker Muted Foreground */
 
-    --accent: 45 93% 57%; /* Yellow from logo */
-    --accent-foreground: 45 93% 12%;
+    --accent: 45 93% 55%; /* Slightly darker Yellow */
+    --accent-foreground: 45 93% 10%; /* Darker Accent Foreground */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
