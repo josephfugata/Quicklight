@@ -68,7 +68,7 @@ const services = [
 const comingSoonServices = [
     {
         icon: <Zap className="mb-4 h-8 w-8 text-primary" />,
-        title: 'QUICKLIGHT Energy Hub',
+        title: 'QUICKLIGHT Energy Management',
         description: 'Take full control of your energy future. Our upcoming platform will empower you to monitor production, track savings, and optimize consumption in real-time.',
         image: {
             src: '/green energy.avif',
@@ -144,7 +144,7 @@ export default function Services() {
                                   </div>
                                   <DialogTitle className="text-2xl font-headline">Get Ready to Launch!</DialogTitle>
                                   <DialogDescription className="text-lg">
-                                    The <span className="font-semibold text-primary">QUICKLIGHT Energy Hub</span> is launching soon.
+                                    The <span className="font-semibold text-primary">QUICKLIGHT Energy Management</span> is launching soon.
                                   </DialogDescription>
                                 </DialogHeader>
                                 <div className="py-4">
