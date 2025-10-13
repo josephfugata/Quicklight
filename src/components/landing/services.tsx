@@ -21,10 +21,6 @@ const services = [
       alt: 'Solar panels on a residential roof',
       hint: 'house solar'
     },
-    testimonial: {
-      text: 'The installation was professional and quick. Our energy bills have been cut by over 80%! Truly a game-changer for our family.',
-      author: 'The Johnson Family',
-    },
   },
   {
     icon: <Network className="mb-4 h-8 w-8 text-primary" />,
@@ -34,10 +30,6 @@ const services = [
       src: 'https://i.imgur.com/aHHXKqE.png',
       alt: 'Chart showing energy production and consumption',
       hint: 'energy chart'
-    },
-    testimonial: {
-      text: 'Understanding our energy flow with the analysis helped us save even more than we expected. It\'s a brilliant service.',
-      author: 'A. Fernandez',
     },
   },
   {
@@ -49,10 +41,6 @@ const services = [
       alt: 'A solar-powered street light at dusk',
       hint: 'solar streetlight'
     },
-    testimonial: {
-      text: 'QuickLight\'s solar street lights have been a fantastic, low-maintenance solution for our new development project.',
-      author: 'City Planner, Springfield',
-    },
   },
   {
     icon: <TrafficCone className="mb-4 h-8 w-8 text-primary" />,
@@ -62,10 +50,6 @@ const services = [
       src: 'https://i.imgur.com/7U6J49P.png',
       alt: 'A solar-powered traffic flasher on a road',
       hint: 'traffic safety'
-    },
-    testimonial: {
-      text: 'These flashers are incredibly reliable, even during long stretches of cloudy weather. A must-have for traffic safety.',
-      author: 'Department of Transportation',
     },
   },
 ];
@@ -120,14 +104,6 @@ export default function Services() {
                   />
                 </div>
               </CardContent>
-              <CardFooter className="mt-auto">
-                <blockquote className="w-full border-l-4 border-primary pl-4 italic text-sm">
-                  <p className="text-foreground/80">"{service.testimonial.text}"</p>
-                  <cite className="mt-2 block text-right font-semibold not-italic text-foreground">
-                    - {service.testimonial.author}
-                  </cite>
-                </blockquote>
-              </CardFooter>
             </Card>
           ))}
           {externalServices.map((service) => (
@@ -165,10 +141,6 @@ export default function Services() {
                         </div>
                     </div>
                 </div>
-              <CardFooter className="mt-auto">
-                <blockquote className="w-full border-l-4 border-primary pl-4 italic text-sm">
-                </blockquote>
-              </CardFooter>
             </Card>
           ))}
         </div>
