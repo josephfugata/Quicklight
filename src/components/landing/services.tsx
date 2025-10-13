@@ -34,8 +34,8 @@ const services = [
   },
   {
     icon: <Lightbulb className="mb-4 h-8 w-8 text-primary" />,
-    title: 'Solar Street Lights (HVAC Affiliated)',
-    description: 'Illuminate communities with our high-performance solar street lights, affiliated with HVAC for top-tier quality and reliability.',
+    title: 'Solar Street Lights',
+    description: 'Illuminate communities with our high-performance solar street lights, known for top-tier quality and reliability.',
     image: {
       src: 'https://i.imgur.com/TlJqrRA.png',
       alt: 'A solar-powered street light at dusk',
