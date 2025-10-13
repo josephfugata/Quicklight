@@ -1,15 +1,26 @@
+'use client';
+
 import Image from 'next/image';
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { Home, Lightbulb, Thermometer, Waypoints, Zap, Network } from 'lucide-react';
+import { Home, Lightbulb, Thermometer, Zap, Network } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '../ui/button';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+import { Rocket } from 'lucide-react';
+
 
 const services = [
   {
@@ -54,12 +65,11 @@ const services = [
   },
 ];
 
-const externalServices = [
+const comingSoonServices = [
     {
         icon: <Zap className="mb-4 h-8 w-8 text-primary" />,
-        title: 'Energy Management',
-        description: 'Optimize your energy consumption with advanced management systems. We partner with industry leaders to provide comprehensive solutions.',
-        link: 'https://google.com', // Replace with the actual external link
+        title: 'QUICKLIGHT Energy Hub',
+        description: 'Take full control of your energy future. Our upcoming platform will empower you to monitor production, track savings, and optimize consumption in real-time.',
         image: {
             src: '/green energy.avif',
             alt: 'Smart home dashboard showing energy consumption',
@@ -106,7 +116,7 @@ export default function Services() {
               </CardContent>
             </Card>
           ))}
-          {externalServices.map((service) => (
+          {comingSoonServices.map((service) => (
              <Card key={service.title} className="md:col-span-2 flex flex-col overflow-hidden">
                 <div className="grid md:grid-cols-2 gap-6 items-center">
                     <div>
@@ -119,16 +129,32 @@ export default function Services() {
                             </div>
                             </div>
                         </CardHeader>
-                        <CardContent>
-                            <p className='text-muted-foreground text-center mb-4'>Learn more about our advanced energy management solutions through our partner website.</p>
-                            <Button asChild className="w-full">
-                                <Link href={service.link} target="_blank">
-                                    Learn More
-                                </Link>
-                            </Button>
+                        <CardContent className="p-6 pt-0">
+                            <p className='text-muted-foreground text-sm text-center mb-4'>A powerful new way to manage your energy is on the way. Get ready to unlock the full potential of your solar investment.</p>
+                            <Dialog>
+                              <DialogTrigger asChild>
+                                <Button className="w-full">
+                                  Get Ready
+                                </Button>
+                              </DialogTrigger>
+                              <DialogContent className="sm:max-w-[425px] text-center">
+                                <DialogHeader>
+                                  <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 mb-4">
+                                      <Rocket className="h-6 w-6 text-primary" />
+                                  </div>
+                                  <DialogTitle className="text-2xl font-headline">Get Ready to Launch!</DialogTitle>
+                                  <DialogDescription className="text-lg">
+                                    The <span className="font-semibold text-primary">QUICKLIGHT Energy Hub</span> is launching soon.
+                                  </DialogDescription>
+                                </DialogHeader>
+                                <div className="py-4">
+                                  <p className="text-muted-foreground">This powerful platform will give you unprecedented control over your energy usage, providing real-time insights and maximizing your savings. Stay tuned for the official release!</p>
+                                </div>
+                              </DialogContent>
+                            </Dialog>
                         </CardContent>
                     </div>
-                    <div className="p-6">
+                    <div className="p-6 md:p-0 md:pr-6 md:py-6">
                         <div className="aspect-video overflow-hidden rounded-lg border">
                         <Image
                             src={service.image.src}
