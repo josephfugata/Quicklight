@@ -22,7 +22,7 @@ const projects = [
     category: 'Utility-Scale',
   },
   {
-    src: 'https://i.imgur.com/rYxb3ZY.jpeg',
+    src: '/Residential 2.webp',
     alt: 'Close-up of solar panels on a tiled roof',
     hint: 'roof solar',
     category: 'Residential',
