@@ -48,34 +48,36 @@ export default function HowItWorks() {
           </p>
         </div>
 
-        <div className="mt-12">
-            <div className="relative grid gap-y-12">
-                {/* The timeline line */}
-                <div className="absolute left-6 md:left-1/2 top-0 h-full w-0.5 bg-border -translate-x-1/2" aria-hidden="true" />
-                
-                {steps.map((step, index) => (
-                  <div key={step.title} className="relative grid items-center md:grid-cols-2">
-                      {/* Icon and circle */}
-                      <div className={cn(
-                        `flex-shrink-0 w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center absolute left-6 md:left-1/2 top-1 -translate-x-1/2 z-10 ring-8 ring-secondary`,
-                        index % 2 === 0 ? 'md:col-start-1' : 'md:col-start-2'
-                      )}
-                      style={{gridRow: '1'}}>
-                          {step.icon}
-                      </div>
-
-                      {/* Content block */}
-                      <div className={cn(
-                          'p-6 rounded-lg bg-card shadow-md border transform transition-transform hover:scale-105 hover:shadow-xl ml-12 md:ml-0',
-                          index % 2 === 0 ? 'md:col-start-1 md:mr-[50%] md:pr-16' : 'md:col-start-2 md:ml-[50%] md:pl-16 md:text-left'
-                      )}
-                      style={{gridRow: '1'}}>
-                          <h3 className={cn("text-xl font-bold font-headline", index % 2 !== 0 && 'md:text-right')}>{step.title}</h3>
-                          <p className={cn("mt-2 text-muted-foreground", index % 2 !== 0 && 'md:text-right')}>{step.description}</p>
-                      </div>
+        <div className="relative mt-12">
+          {/* The timeline line */}
+          <div className="absolute left-6 md:left-1/2 top-0 h-full w-0.5 bg-border -translate-x-1/2" aria-hidden="true" />
+          
+          <div className="space-y-12">
+            {steps.map((step, index) => (
+              <div key={step.title} className="relative">
+                <div className={cn(
+                  "md:flex items-center",
+                  index % 2 === 0 ? 'md:justify-start' : 'md:justify-end'
+                )}>
+                  {/* Icon and circle */}
+                  <div className={cn(
+                    `flex-shrink-0 w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center absolute left-6 md:left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 z-10 ring-8 ring-secondary`
+                  )}>
+                      {step.icon}
                   </div>
-                ))}
-            </div>
+
+                  {/* Content block */}
+                  <div className={cn(
+                      'p-6 rounded-lg bg-card shadow-md border transform transition-transform hover:scale-105 hover:shadow-xl ml-20 md:ml-0 md:w-[calc(50%-4rem)]',
+                      index % 2 === 0 ? 'md:text-left' : 'md:text-right'
+                  )}>
+                      <h3 className="text-xl font-bold font-headline">{step.title}</h3>
+                      <p className="mt-2 text-muted-foreground">{step.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
