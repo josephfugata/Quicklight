@@ -30,7 +30,7 @@ const logPosition = (value: number) => {
 
 
 export default function Calculator() {
-  const [monthlyBill, setMonthlyBill] = useState(20000);
+  const [monthlyBill, setMonthlyBill] = useState(5882);
 
   const { yearlySavings, lifetimeSavings, co2Reduction } = useMemo(() => {
     const bill = Math.max(MIN_BILL, Math.min(MAX_BILL, monthlyBill));
