@@ -58,7 +58,7 @@ const services = [
     title: 'Heating, Ventilation and Air Conditioning (HVAC)',
     description: 'Efficient HVAC solutions to ensure comfort in your home or business, powered by clean energy.',
     image: {
-      src: 'https://i.imgur.com/4buW65o.png',
+      src: '/HVAC.webp',
       alt: 'An HVAC unit on the side of a building.',
       hint: 'HVAC unit'
     },
@@ -98,7 +98,7 @@ export default function Services() {
                   {service.icon}
                   <div>
                     <CardTitle className="font-headline text-xl">{service.title}</CardTitle>
-                    <CardDescription className="mt-1">{service.description}</CardDescription>
+                    <CardDescription className="mt-1 min-h-[60px]">{service.description}</CardDescription>
                   </div>
                 </div>
               </CardHeader>
