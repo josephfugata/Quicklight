@@ -7,7 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { Home, Lightbulb, TrafficCone, Waypoints, Zap, Network } from 'lucide-react';
+import { Home, Lightbulb, Thermometer, Waypoints, Zap, Network } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '../ui/button';
 
@@ -43,13 +43,13 @@ const services = [
     },
   },
   {
-    icon: <TrafficCone className="mb-4 h-8 w-8 text-primary" />,
-    title: 'Solar Traffic Flashers',
-    description: 'Enhance road safety with our durable, off-grid solar traffic flashers and warning signs. High visibility and zero running costs.',
+    icon: <Thermometer className="mb-4 h-8 w-8 text-primary" />,
+    title: 'Heating, Ventilation and Air Conditioning (HVAC)',
+    description: 'Efficient HVAC solutions to ensure comfort in your home or business, powered by clean energy.',
     image: {
-      src: 'https://i.imgur.com/7U6J49P.png',
-      alt: 'A solar-powered traffic flasher on a road',
-      hint: 'traffic safety'
+      src: 'https://picsum.photos/seed/hvac1/600/400',
+      alt: 'An HVAC unit on the side of a building.',
+      hint: 'HVAC unit'
     },
   },
 ];
