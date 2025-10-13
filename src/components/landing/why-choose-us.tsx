@@ -39,7 +39,7 @@ export default function WhyChooseUs() {
           <div className="mt-4 text-muted-foreground md:text-xl space-y-4 text-left md:text-center">
             <p>We are Builders of the <strong>Future!</strong></p>
             <p>Solar is not only a free energy resource, but it is also the most environment-friendly energy solution.</p>
-            <p>The significant feel-good return of doing something that is environmentally right drives us. We help our customers capitalize on our country’s innate advantages on the solar front, for we believe that it is time to put the power in your hands, the time to go Solar is NOW!</p>
+            <p>The significant feel-good return of doing something that is environmentally right drives us. We help our customers capitalize on our country’s innate advantages on the solar front, for we believe that it is time to put the power in your hands, the time to start your SOLAR Journey is NOW!</p>
           </div>
         </div>
         <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
