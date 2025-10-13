@@ -38,7 +38,7 @@ const services = [
     title: 'Net Metering & Power Quality Analysis',
     description: 'Export excess solar energy back to the grid and get credited on your bill. We also provide power quality analysis to ensure your system is optimized.',
     image: {
-      src: 'https://i.imgur.com/aHHXKqE.png',
+      src: '/Net Metering.webp',
       alt: 'Chart showing energy production and consumption',
       hint: 'energy chart'
     },
