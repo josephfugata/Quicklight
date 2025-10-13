@@ -93,7 +93,7 @@ export default function Services() {
         <div className="mt-12 grid gap-6 md:grid-cols-2 lg:gap-8">
           {services.map((service) => (
             <Card key={service.title} className="flex flex-col overflow-hidden">
-              <CardHeader>
+              <CardHeader className="flex-shrink-0">
                 <div className="flex items-start gap-4">
                   {service.icon}
                   <div>
@@ -102,7 +102,7 @@ export default function Services() {
                   </div>
                 </div>
               </CardHeader>
-              <CardContent className="flex-grow flex flex-col justify-center">
+              <CardContent className="flex-grow flex flex-col justify-end">
                 <div className="aspect-video overflow-hidden rounded-lg border">
                   <Image
                     src={service.image.src}
