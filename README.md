@@ -1,6 +1,6 @@
 # QUICKLIGHT - Solar Solutions Landing Page
 
-![QUICKLIGHT Hero Section](https://i.imgur.com/pZaVpBP.jpeg)
+![QUICKLIGHT Hero Section](public/Hero.jpeg)
 
 This repository contains the source code for the QUICKLIGHT landing page, a modern, responsive, and high-performance website built to showcase solar energy solutions. This project serves as a comprehensive example of a production-quality web application developed with a modern tech stack.
 

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: 'QUICKLIGHT',
     images: [
       {
-        url: 'https://i.imgur.com/pZaVpBP.jpeg',
+        url: '/Hero.jpeg',
         width: 1200,
         height: 630,
         alt: 'Solar panels on a modern house roof at sunset',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'QUICKLIGHT | Solar Panel & Lighting Solutions Philippines',
     description: 'QUICKLIGHT offers affordable and reliable solar panel systems, solar street lights, and traffic solutions in the Philippines. Lower your bills and embrace clean energy. Get your free quote today!',
-    images: ['https://i.imgur.com/pZaVpBP.jpeg'],
+    images: ['/Hero.jpeg'],
   },
   keywords: ['solar panel philippines', 'solar energy philippines', 'quicklight', 'solar street lights', 'renewable energy', 'solar power system'],
   authors: [{ name: 'QUICKLIGHT Solar and Lighting Solutions Inc.' }],
