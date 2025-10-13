@@ -35,31 +35,19 @@ export default function Calculator() {
   const { yearlySavings, lifetimeSavings, co2Reduction } = useMemo(() => {
     const bill = Math.max(MIN_BILL, Math.min(MAX_BILL, monthlyBill));
 
-    if (bill === 6000) {
-        return {
-            yearlySavings: 60000,
-            lifetimeSavings: 1500000,
-            co2Reduction: 95
-        }
-    }
+    // New baseline and formula based on user request.
+    const BASELINE_BILL = 6000;
+    const SAVINGS_RATIO = 10; // 60000 yearly savings / 6000 monthly bill
+    const CO2_RATIO = 95 / 6000; // 95 tons CO2 / 6000 monthly bill
 
-    const yearlyBill = bill * 12;
-    // Assuming 85% savings with solar
-    const yearlySavings = yearlyBill * 0.85;
+    const yearlySavings = bill * SAVINGS_RATIO;
     const lifetimeSavings = yearlySavings * 25; // 25-year lifespan
-
-    // Environmental calculation constants for the Philippines
-    const AVG_KWH_PRICE = 11; // Average price per kWh in PHP
-    const CO2_PER_KWH = 0.7; // kg of CO2 per kWh for PH grid electricity
-
-    const monthlyKwh = bill / AVG_KWH_PRICE;
-    const lifetimeCo2Kg = monthlyKwh * 12 * 25 * CO2_PER_KWH;
-    const co2Reduction = Math.round(lifetimeCo2Kg / 1000); // in metric tons
-
+    const co2Reduction = bill * CO2_RATIO;
+    
     return {
       yearlySavings: Math.round(yearlySavings),
       lifetimeSavings: Math.round(lifetimeSavings),
-      co2Reduction,
+      co2Reduction: Math.round(co2Reduction),
     };
   }, [monthlyBill]);
 
