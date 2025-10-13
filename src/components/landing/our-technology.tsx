@@ -31,7 +31,7 @@ export default function OurTechnology() {
             <div className="inline-block">
                 <Badge variant="accent">Our Technology</Badge>
             </div>
-            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            <h2 className="font-headline text-3l font-bold tracking-tighter sm:text-4xl md:text-5xl">
               Engineered for Performance
             </h2>
             <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed">
@@ -53,7 +53,7 @@ export default function OurTechnology() {
             <Card className="overflow-hidden w-full max-w-sm shadow-xl">
                 <CardContent className="p-0">
                     <Image
-                        src="https://i.imgur.com/OOMdv2C.png"
+                        src="/Engineered for Performance.webp"
                         alt="Close-up of a high-efficiency solar panel"
                         width={400}
                         height={500}
