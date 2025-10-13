@@ -16,7 +16,7 @@ const projects = [
     category: 'Commercial',
   },
   {
-    src: 'https://i.imgur.com/N8QdFo1.jpeg',
+    src: '/Utility-scale.webp',
     alt: 'Drone view of a large-scale solar farm',
     hint: 'solar farm',
     category: 'Utility-Scale',
