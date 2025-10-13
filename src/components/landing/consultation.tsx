@@ -124,7 +124,7 @@ export default function Consultation() {
                         <FormItem>
                           <FormLabel>Full Name</FormLabel>
                           <FormControl>
-                            <Input placeholder="John Doe" {...field} />
+                            <Input placeholder="John Doe" {...field} aria-label="Full Name" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -137,7 +137,7 @@ export default function Consultation() {
                         <FormItem>
                           <FormLabel>Email</FormLabel>
                           <FormControl>
-                            <Input placeholder="you@example.com" {...field} />
+                            <Input placeholder="you@example.com" {...field} aria-label="Email" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -152,7 +152,7 @@ export default function Consultation() {
                         <FormItem>
                           <FormLabel>Phone Number</FormLabel>
                           <FormControl>
-                            <Input placeholder="09171234567" {...field} />
+                            <Input placeholder="09171234567" {...field} aria-label="Phone Number" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -175,6 +175,7 @@ export default function Consultation() {
                                     'w-full pl-3 text-left font-normal',
                                     !field.value && 'text-muted-foreground'
                                   )}
+                                  aria-label="Pick a preferred date"
                                 >
                                   {field.value ? (
                                     format(field.value, 'PPP')
@@ -210,7 +211,7 @@ export default function Consultation() {
                             <FormControl>
                               <div className="relative flex items-center">
                                 <Clock className="absolute left-3 h-4 w-4 text-muted-foreground" />
-                                <Input type="time" className="pl-10" {...field} />
+                                <Input type="time" className="pl-10" {...field} aria-label="Preferred Time" />
                               </div>
                             </FormControl>
                             <FormMessage />
@@ -230,6 +231,7 @@ export default function Consultation() {
                             placeholder="Tell us about your project or any questions you have..."
                             className="resize-none"
                             {...field}
+                            aria-label="Message (Optional)"
                           />
                         </FormControl>
                         <FormMessage />

@@ -99,6 +99,7 @@ export default function Calculator() {
                                     className="w-36 text-xl font-bold font-headline h-10"
                                     min={MIN_BILL}
                                     max={MAX_BILL}
+                                    aria-label="Average Monthly Electricity Bill"
                                 />
                                 </div>
                             </div>
