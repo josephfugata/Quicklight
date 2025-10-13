@@ -103,7 +103,7 @@ export default function Consultation() {
 
   return (
     <section id="consultation" className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6 max-w-5xl">
         <Card className="mx-auto max-w-2xl shadow-lg">
           <CardHeader className="text-center">
             <CardTitle className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">
@@ -113,7 +113,7 @@ export default function Consultation() {
               Schedule your free, no-obligation energy assessment today. Let's explore your solar potential together.
             </CardDescription>
           </CardHeader>
-          <CardContent>
+          <CardContent className="pt-0">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

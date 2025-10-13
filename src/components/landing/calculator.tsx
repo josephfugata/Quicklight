@@ -117,7 +117,7 @@ export default function Calculator() {
                         <CardHeader className="p-4">
                             <CardTitle className="text-center text-lg font-headline">Your Estimated 25-Year Impact</CardTitle>
                         </CardHeader>
-                        <CardContent className="space-y-2 p-4">
+                        <CardContent className="space-y-2 p-4 pt-0">
                             <div className="flex flex-col items-center p-3 rounded-lg bg-primary/10">
                                 <DollarSign className="h-6 w-6 text-primary mb-1" />
                                 <span className="text-xs text-muted-foreground">Est. Yearly Savings</span>

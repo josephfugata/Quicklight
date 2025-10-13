@@ -32,7 +32,7 @@ const faqs = [
 export default function Faq() {
   return (
     <section id="faq" className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6 max-w-5xl">
         <div className="mx-auto max-w-3xl text-center">
             <div className="inline-block mb-2">
                 <Badge variant="accent">Got Questions?</Badge>

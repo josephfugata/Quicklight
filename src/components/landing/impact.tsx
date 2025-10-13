@@ -25,7 +25,7 @@ const stats = [
 export default function Impact() {
   return (
     <section id="impact" className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6 max-w-5xl">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             Our Collective Impact
@@ -41,7 +41,7 @@ export default function Impact() {
                 {stat.icon}
                 <CardTitle className="font-headline text-4xl font-bold mt-4">{stat.value}</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="pt-0">
                 <p className="text-lg font-semibold">{stat.label}</p>
                 <p className="mt-1 text-sm text-muted-foreground">{stat.description}</p>
               </CardContent>

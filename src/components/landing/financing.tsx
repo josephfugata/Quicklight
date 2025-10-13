@@ -9,7 +9,7 @@ import { Badge } from '../ui/badge';
 export default function Financing() {
   return (
     <section id="financing" className="w-full py-12 md:py-24 lg:py-32">
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6 max-w-5xl">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 mx-auto max-w-5xl">
           <div className="space-y-4">
             <div className="inline-block">

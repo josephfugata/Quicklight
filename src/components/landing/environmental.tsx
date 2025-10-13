@@ -23,7 +23,7 @@ const stats = [
 export default function Environmental() {
   return (
     <section id="environmental" className="w-full py-12 md:py-24 lg:py-32">
-       <div className="container mx-auto grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
+       <div className="container mx-auto grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10 max-w-5xl">
         <div className="space-y-4">
             <div className="inline-block">
                 <Badge variant="accent">Planet Positive</Badge>

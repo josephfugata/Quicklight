@@ -32,7 +32,7 @@ const contactDetails = [
 export default function ContactUs() {
   return (
     <section id="contact-us" className="w-full py-12 md:py-24 lg:py-32 bg-background">
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6 max-w-5xl">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             Get In Touch
@@ -50,7 +50,7 @@ export default function ContactUs() {
                 </div>
                 <CardTitle className="font-headline text-xl font-bold mt-4">{detail.title}</CardTitle>
               </CardHeader>
-              <CardContent className="flex-grow">
+              <CardContent className="flex-grow pt-0">
                 {detail.lines.map((line, index) => (
                   <p key={index} className="text-muted-foreground">
                     {line}
@@ -64,7 +64,7 @@ export default function ContactUs() {
             <h3 className="font-headline text-2xl font-bold tracking-tighter mb-6">Stay Connected</h3>
             <div className="flex justify-center">
                 <Card className="w-full max-w-lg shadow-lg hover:shadow-xl transition-shadow">
-                    <CardContent className="p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <CardContent className="p-6 flex flex-col sm:flex-row items-center justify-between gap-4 pt-6">
                         <div className="flex items-center gap-4">
                             <Facebook className="h-10 w-10 text-[#1877F2] flex-shrink-0" />
                             <div>
