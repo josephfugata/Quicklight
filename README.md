@@ -38,7 +38,7 @@ This project demonstrates proficiency in a modern, full-stack JavaScript ecosyst
 - **UI Components**: [ShadCN UI](https://ui.shadcn.com/)
 - **Form Management**: [React Hook Form](https://react-hook-form.com/) with [Zod](https://zod.dev/) for validation
 - **Icons**: [Lucide React](https://lucide.dev/guide/packages/lucide-react)
-- **Deployment**: Deployed on **Firebase App Hosting**.
+- **Deployment**: Deployed on **Cloudflare Edge Network**.
 
 ---
 
