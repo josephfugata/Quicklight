@@ -8,7 +8,7 @@ const StructuredData = () => {
     "image": "https://quicklight.pinoyentrepreneur.me/Hero.jpeg",
     "url": "https://quicklight.pinoyentrepreneur.me",
     "telephone": "+639176269698",
-    "email": "info@quicklight.pinoyentrepreneur.me",
+    "email": "info@quicklightcorp.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Altica Arcade, Circumferential Road",
