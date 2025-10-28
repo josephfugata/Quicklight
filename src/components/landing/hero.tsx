@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section className="relative h-[80vh] min-h-[500px] w-full">
       <Image
-        src="/Hero.jpeg"
+        src="/Header.webp"
         alt="Solar panels on a modern house roof at sunset, showcasing clean energy solutions."
         fill
         className="object-cover"
