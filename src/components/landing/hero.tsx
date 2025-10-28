@@ -9,7 +9,7 @@ export default function Hero() {
         src="/Header.webp"
         alt="Solar panels on a modern house roof at sunset, showcasing clean energy solutions."
         fill
-        className="object-cover"
+        className="object-cover object-left md:object-center"
         data-ai-hint="solar panels sunset"
         priority
       />
