@@ -22,10 +22,10 @@ const projects = [
     category: 'Utility-Scale',
   },
   {
-    src: '/Residential 2.webp',
-    alt: 'Close-up of solar panels on a tiled roof',
-    hint: 'roof solar',
-    category: 'Residential',
+    src: '/netmetering final photo.webp',
+    alt: 'Net metering equipment installed for a residential solar system',
+    hint: 'net metering energy',
+    category: 'Net Metering',
   },
 ];
 
