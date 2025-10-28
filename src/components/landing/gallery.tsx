@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 
 const projects = [
   {
-    src: '/Residential.webp',
+    src: '/residential final photo.webp',
     alt: 'Modern home with a complete solar roof installation',
     hint: 'modern house solar',
     category: 'Residential',
