@@ -19,7 +19,7 @@ export default function Hero() {
           <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl lg:text-7xl">
             A Brighter Future, Powered by the Sun
           </h1>
-          <p className="mt-6 max-w-2xl mx-auto text-lg text-gray-200 md:text-xl">
+          <p className="mt-6 max-w-2xl mx-auto text-lg font-semibold text-gray-200 md:text-xl">
             Embrace clean energy and unlock incredible savings. We make switching to solar simple, affordable, and rewarding for your home and our planet.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
